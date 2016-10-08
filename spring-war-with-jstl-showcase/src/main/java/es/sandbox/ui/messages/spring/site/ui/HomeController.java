@@ -19,6 +19,13 @@ public class HomeController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HomeController.class);
 
+    @RequestMapping(value = "/")
+    public String home(Flash flash) {
+        flash.info("Welcome to flash messages showcase!");
+
+        LOGGER.debug("{} -> F({}): {}", "/", "hone", flash);
+        return "home";
+    }
 
     @RequestMapping(value = "/a", method = RequestMethod.GET)
     public String a(Flash flash, Model model, HttpServletRequest request) {
