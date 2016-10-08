@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>es.sandbox.ui.messages</groupId>
+    <artifactId>flash-messages-showcases</artifactId>
+    <packaging>pom</packaging>
+    <version>0.1.4</version>
+
+    <name>Flash Messages showcases multimodule super POM</name>
+    <description>Example projects using flash messages</description>
+    <url>https://github.com/jeslopalo/flash-messages-showcases</url>
+    <inceptionYear>2013</inceptionYear>
+
+    <scm>
+        <connection>scm:git:ssh://github.com/jeslopalo/flash-messages-showcases.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jeslopalo/flash-messages-showcases.git</developerConnection>
+        <url>https://github.com/jeslopalo/flash-messages-showcases</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <modules>
+        <module>flash-messages-in-spring-war-with-jstl</module>
+    </modules>
+</project>
