@@ -13,7 +13,7 @@
         <param-name>contextClass</param-name>
         <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
     </context-param>
-    
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>es.sandbox.ui.messages.spring.site.config.RootContextConfigurer</param-value>
