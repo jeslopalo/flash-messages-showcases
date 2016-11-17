@@ -3,19 +3,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.sandbox.ui.messages</groupId>
-    <artifactId>flash-messages-showcase</artifactId>
+    <artifactId>maven-spring-war-jstl-showcase</artifactId>
+    <version>1.0.2</version>
     <packaging>war</packaging>
-    <version>0.1.4</version>
 
-    <name>A simple flash-messages example!</name>
-    <description>Web application showcase for flash messages</description>
+    <name>maven-spring-war-jstl-showcase</name>
+    <description>Demo project using flash-messages with springframework and jstl taglibs.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.6</java.version>
+
+        <flash-messages.version>${project.version}</flash-messages.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>3.2.6.RELEASE</version>
+                <version>4.2.3.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -23,7 +31,7 @@
             <dependency>
                 <groupId>es.sandbox.ui.messages</groupId>
                 <artifactId>flash-messages-bom</artifactId>
-                <version>${project.version}</version>
+                <version>${flash-messages.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -104,6 +112,8 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
