@@ -4,7 +4,7 @@
 
     <groupId>es.sandbox.ui.messages</groupId>
     <artifactId>maven-spring-war-jstl-showcase</artifactId>
-    <version>0.2.4</version>
+    <version>1.0.2</version>
     <packaging>war</packaging>
 
     <name>maven-spring-war-jstl-showcase</name>

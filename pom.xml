@@ -5,7 +5,7 @@
     <groupId>es.sandbox.ui.messages</groupId>
     <artifactId>flash-messages-showcases</artifactId>
     <packaging>pom</packaging>
-    <version>0.2.4</version>
+    <version>1.0.2</version>
 
     <name>flash-messages-showcases</name>
     <description>Example projects using flash-messages</description>
