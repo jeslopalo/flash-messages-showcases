@@ -4,17 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.sandbox.ui.messages</groupId>
-    <artifactId>maven-spring-boot-jstl-showcase</artifactId>
+    <artifactId>maven-spring-boot-thymeleaf-showcase</artifactId>
     <version>1.1.0</version>
     <packaging>jar</packaging>
 
-    <name>maven-spring-boot-jstl-showcase</name>
-    <description>Demo project using flash-messages with spring-boot and jstl taglibs.</description>
+    <name>maven-spring-boot-thymeleaf-showcase</name>
+    <description>Demo project using flash-messages with spring-boot and thymeleaf engine.</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.0.RELEASE</version>
+        <version>1.4.2.RELEASE</version>
         <relativePath/>
         <!-- lookup parent from repository -->
     </parent>
@@ -25,29 +25,20 @@
         <java.version>1.7</java.version>
 
         <flash-messages.version>${project.version}</flash-messages.version>
+        <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+        <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <dependency>
             <groupId>es.sandbox.ui.messages</groupId>
-            <artifactId>flash-messages-spring-boot-starter-taglibs</artifactId>
+            <artifactId>flash-messages-spring-boot-starter-thymeleaf</artifactId>
             <version>${flash-messages.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
         </dependency>
 
     </dependencies>
@@ -60,5 +51,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

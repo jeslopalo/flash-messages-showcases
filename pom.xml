@@ -5,7 +5,7 @@
     <groupId>es.sandbox.ui.messages</groupId>
     <artifactId>flash-messages-showcases</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2</version>
+    <version>1.1.0</version>
 
     <name>flash-messages-showcases</name>
     <description>Example projects using flash-messages</description>
@@ -26,5 +26,7 @@
     <modules>
         <module>maven-spring-boot-jstl-showcase</module>
         <module>maven-spring-war-jstl-showcase</module>
+        <module>maven-spring-boot-thymeleaf-showcase</module>
+        <module>maven-spring-war-thymeleaf-showcase</module>
     </modules>
 </project>

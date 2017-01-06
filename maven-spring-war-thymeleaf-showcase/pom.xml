@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.sandbox.ui.messages</groupId>
-    <artifactId>maven-spring-war-jstl-showcase</artifactId>
+    <artifactId>flash-messages-war-thymeleaf-showcase</artifactId>
     <packaging>war</packaging>
 
     <parent>
@@ -13,8 +13,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>maven-spring-war-jstl-showcase</name>
-    <description>Demo project using flash-messages with springframework and jstl taglibs.</description>
+    <name>flash-messages-war-thymeleaf-showcase</name>
+    <description>Demo project using flash-messages with springframework and thymeleaf views.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +22,7 @@
         <java.version>1.7</java.version>
 
         <flash-messages.version>${project.version}</flash-messages.version>
+        <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
     </properties>
 
     <dependencyManagement>
@@ -48,15 +49,15 @@
         <!-- Flash messages -->
         <dependency>
             <groupId>es.sandbox.ui.messages</groupId>
-            <artifactId>flash-messages-taglibs</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>es.sandbox.ui.messages</groupId>
             <artifactId>flash-messages-core</artifactId>
         </dependency>
         <dependency>
             <groupId>es.sandbox.ui.messages</groupId>
             <artifactId>flash-messages-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>es.sandbox.ui.messages</groupId>
+            <artifactId>flash-messages-thymeleaf</artifactId>
         </dependency>
 
         <!-- Logging -->
@@ -100,13 +101,6 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
-        <!-- needed to process @Configuration classes -->
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>3.0</version>
-        </dependency>
-
         <!-- @Inject -->
         <dependency>
             <groupId>javax.inject</groupId>
@@ -121,13 +115,17 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Thymeleaf -->
         <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>${thymeleaf.version}</version>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring4</artifactId>
+            <version>${thymeleaf.version}</version>
         </dependency>
 
         <!-- Fest reflect -->
