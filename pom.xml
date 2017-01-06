@@ -5,10 +5,10 @@
     <groupId>es.sandbox.ui.messages</groupId>
     <artifactId>flash-messages-showcases</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.4</version>
+    <version>1.1.0</version>
 
-    <name>Flash Messages showcases multimodule super POM</name>
-    <description>Example projects using flash messages</description>
+    <name>flash-messages-showcases</name>
+    <description>Example projects using flash-messages</description>
     <url>https://github.com/jeslopalo/flash-messages-showcases</url>
     <inceptionYear>2013</inceptionYear>
 
@@ -24,6 +24,9 @@
     </properties>
 
     <modules>
-        <module>flash-messages-in-spring-war-with-jstl</module>
+        <module>maven-spring-boot-jstl-showcase</module>
+        <module>maven-spring-war-jstl-showcase</module>
+        <module>maven-spring-boot-thymeleaf-showcase</module>
+        <module>maven-spring-war-thymeleaf-showcase</module>
     </modules>
 </project>

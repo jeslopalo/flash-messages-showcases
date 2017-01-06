@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true">
+    <contextName>flash-messages</contextName>
+
+    <property name="LOGS_HOME" value="/log/sandbox.es/status-messages"/>
+
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <file>${LOGS_HOME}/flash-messages-showcase.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>flash-messages-showcase.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-4relative [%-5level] : %contextName > [%thread] | %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-4relative [%-5level] : %contextName > [%thread] | %logger{35} - %msg%n</pattern>
+            <!-- <pattern>%d %5p > %contextName | %t | %-55logger{55} | %m %n</pattern> -->
+        </encoder>
+    </appender>
+
+    <!-- Application loggers -->
+    <logger name="es.sandbox" additivity="false">
+        <level value="ALL"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="org.springframework.web.servlet.mvc.method.annotation" additivity="false">
+        <level value="ALL"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <!-- Third party loggers -->
+    <logger name="org.springframework" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root>
+        <level value="ALL"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
